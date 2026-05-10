@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'poppins';
+    src: url("/fonts/poppins.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'manrope';
+    src: url("/fonts/manrope.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+.poppins {
+    font-family: 'poppins', sans-serif;
+}
+
+.manrope {
+    font-family: 'manrope', sans-serif;
+}
