@@ -30,22 +30,23 @@
 
         <!-- Social -->
         <div class="flex justify-center lg:justify-start gap-6 text-gray-400">
-          <a href="#" @click="copyText('linkedIn')" class="hover:text-white transition">
+          <a 
+            href="https://www.linkedin.com/in/monin-ho-98b1a2284"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-white transition"
+          >
             <Icon name="mdi:linkedin" class="text-2xl sm:text-3xl" />
           </a>
-          <a href="#" @click="copyText('email')" class="hover:text-white transition">
+
+          <a 
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=monin.ho800@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-white transition"
+          >
             <Icon name="mdi:email" class="text-2xl sm:text-3xl" />
           </a>
-
-          <!-- Popup Message -->
-          <Transition name="fade">
-            <div
-              v-if="copied"
-              class="bg-black text-white text-sm px-3 py-1 rounded-lg shadow-lg"
-            >
-              Clipboard copied!
-            </div>
-          </Transition>
         </div>
       </div>
 
@@ -68,29 +69,6 @@
     <div class="absolute top-0 right-0 w-[300px] sm:w-[400px] lg:w-[500px] h-[300px] sm:h-[400px] lg:h-[500px] bg-indigo-600/10 blur-[120px]"></div>
   </section>
 </template>
-
-<script setup>
-  import { ref } from 'vue'
-
-  const copied = ref(false)
-
-  const copyText = async (text) => {
-    if (text == 'email') {
-      text = 'monin.ho800.gmail.com'
-    } else {
-      text = 'https://www.linkedin.com/in/monin-ho-98b1a2284'
-    }
-
-    await navigator.clipboard.writeText(text)
-
-    copied.value = true
-
-    setTimeout(() => {
-      copied.value = false
-    }, 2000)
-  }
-</script>
-
 
 <style scoped>
   .fade-enter-active,
